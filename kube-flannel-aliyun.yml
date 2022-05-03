@@ -62,9 +62,10 @@ data:
         "isDefaultGateway": true
       }
     }
+  # 修改kube-flannel.yml中的Network的值，要与初始化时的参数--pod-network-cidr的值一致
   net-conf.json: |
     {
-      "Network": "10.24.0.0/16",
+      "Network": "10.244.0.0/16",
       "Backend": {
         "Type": "ali-vpc"
       }
